@@ -15,6 +15,7 @@ import {
 const Portfolio = () => (
   <section id="portfolio" className="p-2">
     <div className="container">
+      {/* title row */}
       <div className="row py-5">
         <div className="col">
           <h1
@@ -35,6 +36,81 @@ const Portfolio = () => (
           ></div>
         </div>{" "}
       </div>
+      {/* end of title row */}
+
+      {/* Tandem Trivia */}
+      <PortRow>
+        <PortImageContainer
+          aos={{
+            name: "fade-left",
+            duration: "1000",
+            // delay: "200",
+            easing: "ease-in-out",
+          }}
+          display="d-md-none"
+          link="https://ten-tandem.netlify.app"
+        >
+          <PortImage img={require("../imgs/tandem.png")} />
+        </PortImageContainer>
+        <PortCard>
+          <PortName
+            name="Tandme Trivia"
+            aos={{
+              name: "fade-right",
+              duration: "1000",
+              delay: "200",
+              easing: "linear",
+            }}
+            link="https://ten-tandem.netlify.app"
+          />
+          <PortText
+            aos={{
+              name: "fade-right",
+              duration: "1000",
+              delay: "200",
+              easing: "linear",
+            }}
+          >
+            A responsive trivia web application that generates random 10
+            questions with their multiple choices and scores user at the end of
+            each finished round.
+          </PortText>
+          <PortTagContainer>
+            <PortTag
+              aos={{
+                name: "fade-right",
+                duration: "1000",
+                delay: "400",
+                easing: "linear",
+              }}
+              name="React JS"
+            />
+            <PortTag
+              aos={{
+                name: "fade-right",
+                duration: "1000",
+                delay: "300",
+                easing: "linear",
+              }}
+              name="Bootstrap 4"
+            />
+          </PortTagContainer>
+        </PortCard>
+        <PortImageContainer
+          aos={{
+            name: "fade-left",
+            duration: "1000",
+            // delay: "200",
+            easing: "ease-in-out",
+          }}
+          display="d-none d-md-block"
+          link="https://ten-trivia.netlify.app"
+        >
+          <PortImage img={require("../imgs/tandem.png")} />
+        </PortImageContainer>
+      </PortRow>
+      {/* end of tandem trivia portfolio */}
+
       {/* country portfolio */}
       <PortRow className="d-none">
         <PortImageContainer
@@ -111,6 +187,7 @@ const Portfolio = () => (
         </PortCard>
       </PortRow>
       {/* end of country portfolio */}
+
       {/* covid portfolio */}
       <PortRow>
         <PortImageContainer
@@ -134,7 +211,7 @@ const Portfolio = () => (
               delay: "200",
               easing: "linear",
             }}
-            link="https://covidstrain.netlify.app"
+            link="https://covidstrain.vercel.app"
           />
           <PortText
             aos={{
@@ -201,6 +278,76 @@ const Portfolio = () => (
         </PortImageContainer>
       </PortRow>
       {/* end of covid portfolio */}
+
+      {/* github repo clone */}
+      <PortRow className="d-none">
+        <PortImageContainer
+          aos={{
+            name: "fade-right",
+            duration: "1000",
+            // delay: "200",
+            easing: "ease-in-out",
+          }}
+          className="countryimg"
+          link="https://devphenom-githubrepo.netlify.app/"
+        >
+          <PortImage img={require("../imgs/github.png")} />
+        </PortImageContainer>
+        <PortCard>
+          <PortName
+            name="Github Repo Clone"
+            aos={{
+              name: "fade-left",
+              duration: "1000",
+              delay: "200",
+              easing: "linear",
+            }}
+            link="https://devphenom-githubrepo.netlify.app/"
+          />
+          <PortText
+            aos={{
+              name: "fade-left",
+              duration: "1000",
+              delay: "200",
+              easing: "linear",
+            }}
+          >
+            A clone of my github profile which displays my github account's
+            profile details and most recent 20 public repositories
+          </PortText>
+          <PortTagContainer>
+            <PortTag
+              aos={{
+                name: "fade-left",
+                duration: "1000",
+                delay: "400",
+                easing: "linear",
+              }}
+              name="HTML/CSS"
+            />
+            <PortTag
+              aos={{
+                name: "fade-left",
+                duration: "1000",
+                delay: "300",
+                easing: "linear",
+              }}
+              name="JavaScript/ES6"
+            />
+            <PortTag
+              aos={{
+                name: "fade-left",
+                duration: "1000",
+                delay: "200",
+                easing: "linear",
+              }}
+              name="GraphQL"
+            />
+          </PortTagContainer>
+        </PortCard>
+      </PortRow>
+      {/* end of github repo clone */}
+
       {/* easybank portfolio */}
       <PortRow className="d-none">
         <PortImageContainer
@@ -211,6 +358,7 @@ const Portfolio = () => (
             easing: "ease-in-out",
           }}
           className="countryimg"
+          display="d-md-none"
           link="https://easybank-landing-page-sooty.vercel.app/"
         >
           <PortImage img={require("../imgs/easybank.png")} />
@@ -219,7 +367,7 @@ const Portfolio = () => (
           <PortName
             name="Easybank Landing Page"
             aos={{
-              name: "fade-left",
+              name: "fade-right",
               duration: "1000",
               delay: "200",
               easing: "linear",
@@ -228,7 +376,7 @@ const Portfolio = () => (
           />
           <PortText
             aos={{
-              name: "fade-left",
+              name: "fade-right",
               duration: "1000",
               delay: "200",
               easing: "linear",
@@ -248,25 +396,25 @@ const Portfolio = () => (
           <PortTagContainer>
             <PortTag
               aos={{
-                name: "fade-left",
+                name: "fade-right",
                 duration: "1000",
-                delay: "300",
+                delay: "400",
                 easing: "linear",
               }}
               name="HTML/CSS"
             />
             <PortTag
               aos={{
-                name: "fade-left",
+                name: "fade-right",
                 duration: "1000",
-                delay: "200",
+                delay: "300",
                 easing: "linear",
               }}
               name="Bootstrap"
             />
             <PortTag
               aos={{
-                name: "fade-left",
+                name: "fade-right",
                 duration: "1000",
                 delay: "200",
                 easing: "linear",
@@ -275,7 +423,21 @@ const Portfolio = () => (
             />
           </PortTagContainer>
         </PortCard>
+        <PortImageContainer
+          aos={{
+            name: "fade-left",
+            duration: "1000",
+            // delay: "200",
+            easing: "ease-in-out",
+          }}
+          className="countryimg"
+          display="d-none d-md-block"
+          link="https://easybank-landing-page-sooty.vercel.app/"
+        >
+          <PortImage img={require("../imgs/easybank.png")} />
+        </PortImageContainer>
       </PortRow>
+      {/* end of easybank landing page */}
     </div>
   </section>
 );

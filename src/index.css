@@ -80,6 +80,7 @@ a {
   cursor: pointer;
   opacity: 1 !important;
   min-height: 150px !important;
+  transition: 1s;
 }
 .portimg:hover {
   opacity: 0.5 !important;
