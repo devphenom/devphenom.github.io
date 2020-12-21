@@ -10,16 +10,11 @@ import React from "react";
 // });
 
 const Main = () => (
-  <div id="main" className="py-md-3 px-3 py-md-5">
-    <div className="container">
-      <div className="row py-md-3 min-100 align-items-center">
+  <div id="main" className="px-3">
+    <div className="container min-100 d-flex align-item-center">
+      <div className="row align-items-center">
         <div className="col-md-10 mx-auto py-md-3">
-          <h4
-            className="p"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            // data-aos-easing="linear"
-          >
+          <h4 className="p" data-aos="zoom-in-up" data-aos-duration="1000">
             Hello{" "}
             <span role="img" aria-label="emoji">
               {" "}
@@ -44,8 +39,8 @@ const Main = () => (
             data-aos-easing="linear"
           >
             <em>
-              I'm a frontend developer based in Nigeria. I develop client-side
-              web applications to meet customer's requirement.
+              I'm a Nigerian based front-end developer building user-friendly
+              client-side web applications to meet customer's requirement.
             </em>
           </h5>
           <a href="mailto:aliabdulsamad15@gmail.com">
