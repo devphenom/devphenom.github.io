@@ -48,7 +48,7 @@ const Portfolio = () => (
             easing: "ease-in-out",
           }}
           display="d-md-none"
-          link="https://ten-tandem.netlify.app"
+          link="https://ten-trivia.netlify.app"
         >
           <PortImage img={require("../imgs/tandem.png")} />
         </PortImageContainer>
@@ -61,7 +61,7 @@ const Portfolio = () => (
               delay: "200",
               easing: "linear",
             }}
-            link="https://ten-tandem.netlify.app"
+            link="https://ten-trivia.netlify.app"
           />
           <PortText
             aos={{
@@ -198,7 +198,7 @@ const Portfolio = () => (
             easing: "ease-in-out",
           }}
           display="d-md-none"
-          link="https://covidstrain.vercel.app"
+          link="https://cov-news.netlify.app"
         >
           <PortImage img={require("../imgs/Covid.png")} />
         </PortImageContainer>
@@ -211,7 +211,7 @@ const Portfolio = () => (
               delay: "200",
               easing: "linear",
             }}
-            link="https://covidstrain.vercel.app"
+            link="https://cov-news.netlify.app"
           />
           <PortText
             aos={{
@@ -272,7 +272,7 @@ const Portfolio = () => (
             easing: "ease-in-out",
           }}
           display="d-none d-md-block"
-          link="https://covidstrain.vercel.app"
+          link="https://cov-news.netlify.app"
         >
           <PortImage img={require("../imgs/Covid.png")} />
         </PortImageContainer>

@@ -4,7 +4,7 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
 // import anime from "animejs/lib/anime.es.js";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "aos/dist/aos";

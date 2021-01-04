@@ -44,8 +44,8 @@ const Navbar = ({ toggleMobileNav, mobileNav }) => {
           </li>
           <li className="nav-item mx-2 btn-outline-orange rounded px-2">
             <a
-              href="https://docs.google.com/document/d/1RbTUo6HLuRtAl-BcbucS3L5E1soykJau_Cigg9BIFds/edit?usp=sharing"
-              className="nav-link  "
+              href="https://docs.google.com/document/d/1NsP6h_QyK7fGTU3U-XWgCop5Jm4Au9bDL8hT049KIrg/edit?usp=sharing"
+              className="nav-link "
               target="_blank"
               rel="noopener noreferrer"
             >

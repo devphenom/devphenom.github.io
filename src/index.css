@@ -1,15 +1,15 @@
 * {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", Roboto, sans-serif;
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
-a {
+/* a {
   text-decoration: none !important;
   color: #ff8e3c !important;
-}
-.bg-light {
+} */
+/* .bg-light {
   background-color: #eff0f3;
 }
 .bg-darK {
@@ -22,8 +22,8 @@ a {
   height: 3px;
   width: 90px;
   background-color: #ff8e3c;
-}
-
+} */
+/* 
 .headline {
   color: #0d0d0d;
 }
@@ -36,9 +36,9 @@ a {
 .btn-orange {
   background-color: #ff8e3c !important;
   color: #0d0d0d !important;
-}
+} */
 /* DARK MODE */
-.bg-darK .p {
+/* .bg-darK .p {
   color: #a7a9be;
 }
 
@@ -71,10 +71,10 @@ a {
 }
 #scrollUp:hover {
   opacity: 1;
-}
+} */
 
 /* PORTFOLIO */
-.portimg {
+/* .portimg {
   border: 2px solid #ff8e3c;
   border-radius: 20px;
   cursor: pointer;
@@ -84,18 +84,18 @@ a {
 }
 .portimg:hover {
   opacity: 0.5 !important;
-}
+} */
 
 /* ABOUT */
-.icon {
+/* .icon {
   width: 48px;
   height: 48px;
-}
+} */
 
 /* NAVBAR */
 /* toggle icon on small screen changes */
 
-.navbar-toggler {
+/* .navbar-toggler {
   z-index: 99999999 !important;
 }
 .animated-icon3 {
@@ -178,10 +178,10 @@ a {
   transform: rotate(-45deg);
   top: 21px;
   left: 8px;
-}
+} */
 
 /* MOBILE NAV */
-#mobilenav {
+/* #mobilenav {
   position: fixed;
   top: 0;
   right: 0;
@@ -200,10 +200,10 @@ a {
 #mobilenav ul li {
   list-style-type: none;
   font-size: 2rem;
-}
+} */
 
 /* RESPONSIVENESS */
-@media screen and (min-width: 425px) {
+/* @media screen and (min-width: 425px) {
   .portimg {
     min-height: 400px !important;
   }
@@ -226,4 +226,4 @@ a {
   .portfolio-name {
     font-size: 2rem !important;
   }
-}
+} */
