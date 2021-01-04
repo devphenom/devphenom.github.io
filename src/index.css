@@ -95,7 +95,7 @@ html {
 /* NAVBAR */
 /* toggle icon on small screen changes */
 
-/* .navbar-toggler {
+.navbar-toggler {
   z-index: 99999999 !important;
 }
 .animated-icon3 {
@@ -178,7 +178,7 @@ html {
   transform: rotate(-45deg);
   top: 21px;
   left: 8px;
-} */
+}
 
 /* MOBILE NAV */
 /* #mobilenav {

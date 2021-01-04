@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  makeStyles,
-  Typography,
-  Button,
-  Paper,
-} from "@material-ui/core";
+import { Grid, makeStyles, Typography, Button, Paper } from "@material-ui/core";
 import React from "react";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";

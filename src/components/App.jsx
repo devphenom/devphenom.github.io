@@ -43,14 +43,14 @@ const App = () => {
       <CssBaseline />
       <div className={darkmode ? "bg-darK" : "bg-light"}>
         <>
-          {/* <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />
-          <Navbar toggleMobileNav={toggleMobileNav} mobileNav={mobileNav} /> */}
+          <Navbar toggleMobileNav={toggleMobileNav} mobileNav={mobileNav} />
+          <Main />
+          {/* <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />*/}
           {/* <MobileNav
             toggleMobileNav={toggleMobileNav}
             mobileNav={mobileNav}
             darkmode={darkmode}
           /> */}
-          <Main />
           {/* <About />
           <Portfolio />
           <Contact /> */}
