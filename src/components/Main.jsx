@@ -6,19 +6,19 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-    "& .MuiTypography-h2": {
-      fontWeight: "bold",
-      margin: `${theme.spacing(2)}px 0`,
-    },
     "@media (max-width:600px)": {
       padding: theme.spacing(3),
-      "& .MuiTypography-h2": {
-        fontSize: "2rem",
-      },
       "& .MuiTypography-h6": {
         textAlign: "justify",
         fontSize: "1rem",
       },
+    },
+  },
+  nameTypo: {
+    fontWeight: "bold",
+    margin: `${theme.spacing(2)}px 0`,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem",
     },
   },
   button: {
@@ -66,6 +66,7 @@ const Main = () => {
             data-aos-duration="1000"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
+            classes={{ root: classes.nameTypo }}
           >
             Ali Abdulsamad Tolulope
           </Typography>
