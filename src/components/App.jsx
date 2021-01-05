@@ -45,14 +45,14 @@ const App = () => {
         <>
           <Navbar toggleMobileNav={toggleMobileNav} mobileNav={mobileNav} />
           <Main />
+          <About />
           {/* <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />*/}
           {/* <MobileNav
             toggleMobileNav={toggleMobileNav}
             mobileNav={mobileNav}
             darkmode={darkmode}
           /> */}
-          {/* <About />
-          <Portfolio />
+          {/*           <Portfolio />
           <Contact /> */}
         </>
       </div>

@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 const Main = () => {
   const classes = useStyles();
   return (
-    <Paper variant={0} component="div">
+    <Paper component="section" elevation={0}>
       <Grid
         container
         className={classes.root}

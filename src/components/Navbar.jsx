@@ -37,7 +37,7 @@ const Navbar = ({ toggleMobileNav, mobileNav }) => {
           <Grid item></Grid>
           <Grid item sm></Grid>
 
-          <Grid item mdDown>
+          <Grid item>
             <Hidden mdDown>
               <Button href="#about" color="primary" classes={buttonClass}>
                 About
