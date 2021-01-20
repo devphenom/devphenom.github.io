@@ -1,65 +1,79 @@
+import { List, ListItem, ListItemText, makeStyles } from "@material-ui/core";
 import React from "react";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: "fixed",
+    background: theme.palette.primary.light,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    height: "100vh",
+    width: "100vw",
+    marginLeft: "-100vw",
+    zIndex: 999999,
+    transition: "0.8s",
+    "&.active": {
+      margin: 0,
+    },
+  },
+  listRoot: {
+    textAlign: "center",
+    fontSize: "3rem",
+    color: theme.palette.primary.main,
+    "& .MuiTypography-displayBlock": {
+      fontSize: "1.5rem",
+    },
+    // margin: "auto",
+  },
+}));
+
+export function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
 const MobileNav = ({ toggleMobileNav, mobileNav, darkmode }) => {
+  const classes = useStyles();
   return (
-    <div
-      className={`container-fluid d-md-none ${mobileNav ? "active" : ""} ${
-        darkmode ? "bg-darK" : "bg-light"
-      }`}
-      id="mobilenav"
+    <List
+      className={`${classes.root} ${mobileNav ? "active" : ""}`}
+      component="nav"
     >
-      <div className="row h-100 align-items-center justify-content-center">
-        <div className="col-11 col-md-8">
-          <ul className="navbar-nav mt-5 pt-5 text-center">
-            <li className="nav-item">
-              <a href="#about" className="nav-link" onClick={toggleMobileNav}>
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#portfolio"
-                className="nav-link"
-                onClick={toggleMobileNav}
-              >
-                Portfolio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link" onClick={toggleMobileNav}>
-                Contact
-              </a>
-            </li>
-            <li className="nav-item btn-outline-orange rounded">
-              <a
-                href="https://docs.google.com/document/d/1RbTUo6HLuRtAl-BcbucS3L5E1soykJau_Cigg9BIFds/edit?usp=sharing"
-                className="nav-link"
-                onClick={toggleMobileNav}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      <ListItemLink
+        href="#about"
+        onClick={toggleMobileNav}
+        className={classes.listRoot}
+      >
+        <ListItemText>About</ListItemText>
+      </ListItemLink>
+      <ListItemLink
+        href="#portfolio"
+        onClick={toggleMobileNav}
+        className={classes.listRoot}
+      >
+        <ListItemText>Portfolio</ListItemText>
+      </ListItemLink>
+      <ListItemLink
+        href="#contact"
+        onClick={toggleMobileNav}
+        className={classes.listRoot}
+      >
+        <ListItemText>Contact</ListItemText>
+      </ListItemLink>
+      <ListItemLink
+        href="https://docs.google.com/document/d/1NsP6h_QyK7fGTU3U-XWgCop5Jm4Au9bDL8hT049KIrg/edit?usp=sharing"
+        variant="outlined"
+        onClick={toggleMobileNav}
+        className={classes.listRoot}
+      >
+        <ListItemText>Resume</ListItemText>
+      </ListItemLink>
+    </List>
   );
 };
 
-// export default MobileNav;
-
-//   <div id="mobilenav">
-//     <div className="container">
-//       <div className="row">
-//         <div className="col-12">
-//           <div className="mobilenav text-center">
-
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
 export default MobileNav;

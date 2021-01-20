@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import {
   createMuiTheme,
   CssBaseline,
-  responsiveFontSizes,
-  // makeStyles,
+  makeStyles,
   ThemeProvider,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
@@ -14,49 +13,93 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
-let theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#ff8e3c",
-      light: "#eff0f3",
-      dark: "#0d0d0d",
+// let theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       main: "#ff8e3c",
+//       light: "#eff0f3",
+//       dark: "#0d0d0d",
+//     },
+//     // secondary: {
+//     //   main:
+//     // },
+//   },
+//   typography: {
+//     fontFamily: ['"Josefin Sans"', "Roboto", "sans-serif"].join(","),
+//     fontSize: 16,
+//   },
+// });
+// theme = responsiveFontSizes(theme);
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    overflow: "hidden",
+    "& .link": {
+      textDecoration: "none",
+      color: "#ff8e3c",
     },
-    // secondary: {
-    //   main:
-    // },
   },
-  typography: {
-    fontFamily: ['"Josefin Sans"', "Roboto", "sans-serif"].join(","),
-    fontSize: 16,
-  },
-});
-theme = responsiveFontSizes(theme);
+}));
 
 const App = () => {
+  const classes = useStyles();
   const [darkmode, setdarkmode] = useState(false);
   const [mobileNav, setmobileNav] = useState(false);
-
+  const theme = createMuiTheme(darkmode ? dark : light);
   const toggleMobileNav = () => setmobileNav(!mobileNav);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className={darkmode ? "bg-darK" : "bg-light"}>
+      <div className={classes.root}>
         <>
           <Navbar toggleMobileNav={toggleMobileNav} mobileNav={mobileNav} />
           <Main />
           <About />
           <Portfolio />
-          {/* <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />*/}
-          {/* <MobileNav
+          <Contact />
+          <MobileNav
             toggleMobileNav={toggleMobileNav}
             mobileNav={mobileNav}
             darkmode={darkmode}
-          /> */}
-          {/* <Contact /> */}
+          />
+          <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />
         </>
       </div>
     </ThemeProvider>
   );
 };
 export default App;
+
+export const light = {
+  palette: {
+    type: "light",
+    primary: {
+      main: "#ff8e3c",
+      light: "#eff0f3",
+      dark: "#0d0d0d",
+    },
+  },
+  typography: {
+    fontFamily: ['"Josefin Sans"', "Roboto", "sans-serif"].join(","),
+    fontSize: 16,
+  },
+};
+export const dark = {
+  palette: {
+    type: "dark",
+    primary: {
+      main: "#ff8e3c",
+      light: "#eff0f3",
+      dark: "#fffffe",
+    },
+    background: {
+      default: "#0f0e17",
+      paper: "#0f0e17",
+    },
+  },
+  typography: {
+    fontFamily: ['"Josefin Sans"', "Roboto", "sans-serif"].join(","),
+    fontSize: 16,
+  },
+};

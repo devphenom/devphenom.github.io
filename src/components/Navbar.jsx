@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   // },
   label: {
     textTransform: "none",
+    "&:hover": {
+      color: theme.palette.primary.main,
+    },
   },
 }));
 const Navbar = ({ toggleMobileNav, mobileNav }) => {

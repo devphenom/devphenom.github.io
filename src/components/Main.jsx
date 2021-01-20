@@ -76,6 +76,7 @@ const Main = () => {
             data-aos-duration="1000"
             data-aos-delay="250"
             data-aos-easing="linear"
+            color="primary.dark"
           >
             <em>
               I'm a Nigerian based front-end developer building user-friendly

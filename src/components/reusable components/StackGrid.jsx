@@ -6,7 +6,7 @@ export default function StackGrid(props) {
   return (
     <Grid
       item
-      md={4}
+      xs={4}
       container
       direction="column"
       alignItems="center"

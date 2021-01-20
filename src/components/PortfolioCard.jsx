@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Grid,
   Icon,
@@ -5,21 +6,21 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import React from "react";
 import Tags from "./reusable components/Tags";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(3),
-    "& .MuiTypography-paragraph": {
-      fontSize: "16px",
-      color: theme.palette.primary.dark,
-      opacity: ".8",
-    },
+    margin: theme.spacing(3),
+    // "& .MuiTypography-paragraph": {
+    //   fontSize: "16px",
+    //   color: theme.palette.primary.dark,
+    //   opacity: ".8",
+    // },
   },
   h2Typo: {
     fontWeight: "bold",
-    fontSize: "3rem",
+    fontSize: "2.5rem",
     color: theme.palette.primary.dark,
     [theme.breakpoints.down("md")]: {
       fontSize: "2rem",
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     padding: `${theme.spacing(3)}px auto`,
-    margin: `${theme.spacing(3)}px auto`,
+    margin: `${theme.spacing(8)}px auto`,
   },
   textContainer: {
     padding: theme.spacing(5),
@@ -38,13 +39,14 @@ const useStyles = makeStyles((theme) => ({
   imgContainer: {
     padding: theme.spacing(2),
     [theme.breakpoints.down("md")]: {
-      // padding: theme.spacing(2),
+      padding: theme.spacing(2),
     },
   },
 }));
+
 export default function PortfolioCard(props) {
   const classes = useStyles();
-  const { text, reverse } = props;
+  const { reverse, img, title, link, children, tags } = props;
   return (
     <Grid
       container
@@ -53,26 +55,45 @@ export default function PortfolioCard(props) {
       alignItems="center"
       classes={{ root: classes.container }}
     >
-      <Grid item md={7}>
-        <img src={require("../imgs/tandem.png")} alt="" className="portimg" />
+      <Grid
+        item
+        md={7}
+        data-aos={reverse ? "fade-left" : "fade-right"}
+        data-aos-duration="1000"
+        data-aos-easing="linear"
+      >
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img src={img} alt="" className="portimg" />
+        </a>
       </Grid>
       <Grid item md={5} classes={{ root: classes.textContainer }}>
-        <Typography variant="h2" classes={{ root: classes.h2Typo }}>
-          Tandem Trivia
+        <Typography
+          variant="h2"
+          classes={{ root: classes.h2Typo }}
+          data-aos={reverse ? "fade-right" : "fade-left"}
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+        >
+          {title}
           <IconButton
-            aria-label="delete"
+            aria-label="external link"
             className=""
-            href="https://frontendmentor.io"
+            href={link}
+            target="_blank"
           >
             <Icon className="fas fa-external-link-alt icon" color="primary" />
           </IconButton>
         </Typography>
-        <Typography paragraph>
-          A responsive trivia web application that generates random 10 questions
-          with their multiple choices and scores user at the end of each
-          finished round.
+        <Typography
+          paragraph
+          data-aos={reverse ? "fade-right" : "fade-left"}
+          data-aos-duration="1200"
+          data-aos-easing="linear"
+          color="primary.dark"
+        >
+          {children}
         </Typography>
-        <Tags tags={["hello", "world", "letter", "tag"]} />
+        <Tags tags={tags} reverse={reverse ? true : false} />
       </Grid>
     </Grid>
   );

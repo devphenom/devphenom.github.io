@@ -3,8 +3,8 @@ import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
-    margin: theme.spacing(1),
+    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
+    margin: theme.spacing(0.5),
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.light,
     borderRadius: "4px",
@@ -12,30 +12,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Tags(props) {
-  let no = 10;
+  let duration = 800;
   const classes = useStyles();
-  const { tags } = props;
+  const { tags, reverse } = props;
   return (
-    <Grid container justify="flex-end">
+    <Grid container justify={reverse ? "flex-end" : "flex-start"}>
       {tags.map((tag) => (
-        <Grid component="span" item key={tag} classes={{ root: classes.root }}>
-          {`${tag} ${(no += 1)}`}
+        <Grid
+          component="span"
+          item
+          key={tag}
+          classes={{ root: classes.root }}
+          data-aos={reverse ? "fade-right" : "fade-left"}
+          data-aos-duration={(duration += 200)}
+          data-aos-easing="linear"
+        >
+          {tag}
         </Grid>
       ))}
     </Grid>
   );
 }
-// export const PortTag = (props) => (
-//   <span
-//     className="px-3 py-1 rounded m-2 bg-card"
-//     data-aos={props.aos.name}
-//     data-aos-duration={props.aos.duration}
-//     data-aos-delay={props.aos.delay}
-//     data-aos-easing={props.aos.easing}
-//   >
-//     {props.name}
-//   </span>
-// );
-// export const PortTagContainer = (props) => (
-//   <div className="row justify-content-end">{props.children}</div>
-// );

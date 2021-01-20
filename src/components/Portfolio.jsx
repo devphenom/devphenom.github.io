@@ -1,21 +1,14 @@
-import {
-  Box,
-  Grid,
-  Icon,
-  IconButton,
-  makeStyles,
-  Paper,
-  Typography,
-} from "@material-ui/core";
+import { Box, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 import React from "react";
 import PortfolioCard from "./PortfolioCard";
-import StackGrid from "./reusable components/StackGrid";
+import Images from "../imgs/Img";
 // import PortCard from "./PortfolioCard";
 // import preload from "./portfoliodata.json";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: `${theme.spacing(3)}px auto`,
+    margin: `${theme.spacing(3)}px aut0`,
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(1),
     },
@@ -39,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
       opacity: ".8",
     },
   },
-  container: {
-    padding: `${theme.spacing(3)}px auto`,
-    margin: `${theme.spacing(3)}px auto`,
-  },
+  // container: {
+  //   padding: `${theme.spacing(3)}px auto`,
+  //   margin: `${theme.spacing(3)}px auto`,
+  // },
   about: {
     padding: `${theme.spacing(3)}px auto`,
   },
@@ -54,7 +47,7 @@ const Portfolio = () => {
       component="section"
       elevation={0}
       className={classes.root}
-      id="about"
+      id="portfolio"
     >
       <Grid container alignItems="center" justify="center">
         <Grid item lg={10}>
@@ -75,7 +68,79 @@ const Portfolio = () => {
               data-aos-delay="150"
               data-aos-easing="linear"
             ></Box>
-            <PortfolioCard reverse />
+            {/* Tandem  */}
+            <PortfolioCard
+              title="Tandem Trivia"
+              link="https://ten-trivia.netlify.app/"
+              reverse
+              tags={["React JS", "Bootstrap 4"]}
+              img={Images.tandem}
+            >
+              A responsive trivia web application that generates random 10
+              questions with their multiple choices and scores user at the end
+              of each finished round.
+            </PortfolioCard>
+            {/* Country REST API */}
+            <PortfolioCard
+              title="Country Rest API Data"
+              link="https://my-country.vercel.app/"
+              tags={["React JS", "Rest API", "Dark Mode"]}
+              img={Images.country}
+            >
+              A challenge from{" "}
+              <a
+                href="https://frontendmentors.io"
+                className="link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                frontendmentor
+              </a>{" "}
+              which displays countries data (flag, population, region, capital,
+              borders etc.).
+            </PortfolioCard>
+            {/*  Covid 19 Tracker */}
+            <PortfolioCard
+              title="Covid 19 Tracker"
+              reverse
+              link="https://cov-news.netlify.app/"
+              tags={["HTML/CSS", "Bootstrap 4", "JavaScript/ES6", "Rest API"]}
+              img={Images.covid}
+            >
+              A web application that keeps track of Corona Virus data around the
+              world. Top 5 affected countries, death, affected and recovered
+              cases.
+            </PortfolioCard>
+            {/*  Github Repo Clone */}
+            <PortfolioCard
+              title="Github Repo Clone"
+              link="https://devphenom-githubrepo.netlify.app/"
+              tags={["HTML/CSS", "JavaScript/ES6", "Graph QL"]}
+              img={Images.github}
+            >
+              A clone of my github profile which displays my github account's
+              profile details and most recent 20 public repositories
+            </PortfolioCard>
+            {/*  Easybank Landing Page */}
+            <PortfolioCard
+              title="Easybank Landing Page"
+              reverse
+              link="https://easybank-landing-page-sooty.vercel.app/"
+              tags={["HTML/CSS", "Bootstrap 4", "AOS"]}
+              img={Images.easybank}
+            >
+              Design from{" "}
+              <a
+                href="https://frontendmentor.io/"
+                className="link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                frontendmentor
+              </a>{" "}
+              challenge. A functional client side landing page for a bank web
+              application.
+            </PortfolioCard>
           </Grid>
         </Grid>
       </Grid>

@@ -5,7 +5,7 @@ import Images from "../imgs/Img";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `${theme.spacing(3)}px auto`,
+    padding: `${theme.spacing(3)}px`,
     "& .MuiTypography-h3": {
       fontWeight: "bold",
     },
@@ -23,12 +23,13 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiTypography-paragraph": {
       color: theme.palette.primary.dark,
-      opacity: ".8",
+      opacity: ".9",
     },
   },
   aboutP: {},
   about: {
     padding: `${theme.spacing(3)}px auto`,
+    margin: `${theme.spacing(8)}px auto`,
   },
 }));
 
