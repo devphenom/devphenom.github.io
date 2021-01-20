@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.49e8d140.chunk.css",
-    "main.js": "/portfolio/static/js/main.a920d219.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.a920d219.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.3fc2c9ee.chunk.css",
+    "main.js": "/portfolio/static/js/main.83dbbafd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.83dbbafd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.5a9a206f.chunk.css": "/portfolio/static/css/2.5a9a206f.chunk.css",
-    "static/js/2.0ee0d9f4.chunk.js": "/portfolio/static/js/2.0ee0d9f4.chunk.js",
-    "static/js/2.0ee0d9f4.chunk.js.map": "/portfolio/static/js/2.0ee0d9f4.chunk.js.map",
+    "static/js/2.73b682c9.chunk.js": "/portfolio/static/js/2.73b682c9.chunk.js",
+    "static/js/2.73b682c9.chunk.js.map": "/portfolio/static/js/2.73b682c9.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d925902c22edef821729b2cf43a854fc.js": "/portfolio/precache-manifest.d925902c22edef821729b2cf43a854fc.js",
+    "precache-manifest.b8035689550991685c45aa21ab931ca7.js": "/portfolio/precache-manifest.b8035689550991685c45aa21ab931ca7.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.5a9a206f.chunk.css.map": "/portfolio/static/css/2.5a9a206f.chunk.css.map",
-    "static/css/main.49e8d140.chunk.css.map": "/portfolio/static/css/main.49e8d140.chunk.css.map",
-    "static/js/2.0ee0d9f4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0ee0d9f4.chunk.js.LICENSE.txt",
+    "static/css/main.3fc2c9ee.chunk.css.map": "/portfolio/static/css/main.3fc2c9ee.chunk.css.map",
+    "static/js/2.73b682c9.chunk.js.LICENSE.txt": "/portfolio/static/js/2.73b682c9.chunk.js.LICENSE.txt",
     "static/media/Country.png": "/portfolio/static/media/Country.87df9906.png",
     "static/media/Covid.png": "/portfolio/static/media/Covid.036410ba.png",
     "static/media/easybank.png": "/portfolio/static/media/easybank.c63930c5.png",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.5a9a206f.chunk.css",
-    "static/js/2.0ee0d9f4.chunk.js",
-    "static/css/main.49e8d140.chunk.css",
-    "static/js/main.a920d219.chunk.js"
+    "static/js/2.73b682c9.chunk.js",
+    "static/css/main.3fc2c9ee.chunk.css",
+    "static/js/main.83dbbafd.chunk.js"
   ]
 }
