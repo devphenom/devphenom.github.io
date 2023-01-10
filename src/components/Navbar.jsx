@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Button,
-  Grid,
-  Hidden,
-  makeStyles,
-  Toolbar,
-} from "@material-ui/core";
+import { AppBar, Button, Grid, Hidden, makeStyles, Toolbar } from "@material-ui/core";
 import React from "react";
 // import { Link } from "react-router-dom";
 // $(".navbar-toggler").on("click", function () {
@@ -52,7 +45,7 @@ const Navbar = ({ toggleMobileNav, mobileNav }) => {
                 Contact
               </Button>
               <Button
-                href="https://docs.google.com/document/d/1NsP6h_QyK7fGTU3U-XWgCop5Jm4Au9bDL8hT049KIrg/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1fnzsV1GlV4GGAeb59W5IXKfzxuko8vlaP_do99xvDV0/edit?usp=sharing"
                 color="primary"
                 classes={buttonClass}
                 variant="outlined"

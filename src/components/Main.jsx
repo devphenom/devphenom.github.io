@@ -42,46 +42,20 @@ const Main = () => {
   const classes = useStyles();
   return (
     <Paper component="section" elevation={0}>
-      <Grid
-        container
-        className={classes.root}
-        alignItems="center"
-        justify="center"
-      >
+      <Grid container className={classes.root} alignItems="center" justify="center">
         <Grid item lg={8}>
-          <Typography
-            variant="h4"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-          >
+          <Typography variant="h4" data-aos="zoom-in-up" data-aos-duration="1000">
             Hello{" "}
             <span role="img" aria-label="emoji">
               ✋,
             </span>{" "}
             I'm
           </Typography>
-          <Typography
-            variant="h2"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-            classes={{ root: classes.nameTypo }}
-          >
+          <Typography variant="h2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-in-out" classes={{ root: classes.nameTypo }}>
             Ali Abdulsamad Tolulope
           </Typography>
-          <Typography
-            variant="h6"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-            data-aos-delay="250"
-            data-aos-easing="linear"
-            color="primary.dark"
-          >
-            <em>
-              I'm a Nigerian based front-end developer building user-friendly
-              client-side web applications to meet customer's requirement.
-            </em>
+          <Typography variant="h6" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="250" data-aos-easing="linear" color="primary.dark">
+            <em>I'm a Nigerian based front-end developer building user-friendly client-side web applications to meet customer's requirement.</em>
           </Typography>
           <div style={{ margin: "15px auto" }}>
             <Button

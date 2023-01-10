@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  createMuiTheme,
-  CssBaseline,
-  makeStyles,
-  ThemeProvider,
-} from "@material-ui/core";
+import { createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from "@material-ui/core";
 import Navbar from "./Navbar";
 import MobileNav from "./MobileNav";
 import DarkMode from "./DarkMode";
@@ -43,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
   const classes = useStyles();
-  const [darkmode, setdarkmode] = useState(false);
+  const [darkmode, setdarkmode] = useState(true);
   const [mobileNav, setmobileNav] = useState(false);
   const theme = createMuiTheme(darkmode ? dark : light);
   const toggleMobileNav = () => setmobileNav(!mobileNav);
@@ -58,11 +53,7 @@ const App = () => {
           <About />
           <Portfolio />
           <Contact />
-          <MobileNav
-            toggleMobileNav={toggleMobileNav}
-            mobileNav={mobileNav}
-            darkmode={darkmode}
-          />
+          <MobileNav toggleMobileNav={toggleMobileNav} mobileNav={mobileNav} darkmode={darkmode} />
           <DarkMode darkmode={darkmode} setdarkmode={setdarkmode} />
         </>
       </div>
