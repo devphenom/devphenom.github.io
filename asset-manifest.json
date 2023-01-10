@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.94a9f84b.chunk.css",
-    "main.js": "/static/js/main.c2f118d0.chunk.js",
-    "main.js.map": "/static/js/main.c2f118d0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/css/2.a32f25e9.chunk.css": "/static/css/2.a32f25e9.chunk.css",
-    "static/js/2.83d0a931.chunk.js": "/static/js/2.83d0a931.chunk.js",
-    "static/js/2.83d0a931.chunk.js.map": "/static/js/2.83d0a931.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1de129c9bacde1b7bfab69054b6e5ceb.js": "/precache-manifest.1de129c9bacde1b7bfab69054b6e5ceb.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.a32f25e9.chunk.css.map": "/static/css/2.a32f25e9.chunk.css.map",
-    "static/css/main.94a9f84b.chunk.css.map": "/static/css/main.94a9f84b.chunk.css.map",
-    "static/js/2.83d0a931.chunk.js.LICENSE.txt": "/static/js/2.83d0a931.chunk.js.LICENSE.txt",
-    "static/media/Country.png": "/static/media/Country.87df9906.png",
-    "static/media/Covid.png": "/static/media/Covid.036410ba.png",
-    "static/media/easybank.png": "/static/media/easybank.c63930c5.png",
-    "static/media/github.png": "/static/media/github.904ee265.png",
-    "static/media/netlify.png": "/static/media/netlify.95e178f5.png",
-    "static/media/tandem.png": "/static/media/tandem.12a0f799.png"
+    "main.css": "/portfolio/static/css/main.94a9f84b.chunk.css",
+    "main.js": "/portfolio/static/js/main.6c5affb1.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.6c5affb1.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
+    "static/css/2.a32f25e9.chunk.css": "/portfolio/static/css/2.a32f25e9.chunk.css",
+    "static/js/2.83d0a931.chunk.js": "/portfolio/static/js/2.83d0a931.chunk.js",
+    "static/js/2.83d0a931.chunk.js.map": "/portfolio/static/js/2.83d0a931.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.b6e15122ea91a6893ed0df4a9d2267d9.js": "/portfolio/precache-manifest.b6e15122ea91a6893ed0df4a9d2267d9.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.a32f25e9.chunk.css.map": "/portfolio/static/css/2.a32f25e9.chunk.css.map",
+    "static/css/main.94a9f84b.chunk.css.map": "/portfolio/static/css/main.94a9f84b.chunk.css.map",
+    "static/js/2.83d0a931.chunk.js.LICENSE.txt": "/portfolio/static/js/2.83d0a931.chunk.js.LICENSE.txt",
+    "static/media/Country.png": "/portfolio/static/media/Country.87df9906.png",
+    "static/media/Covid.png": "/portfolio/static/media/Covid.036410ba.png",
+    "static/media/easybank.png": "/portfolio/static/media/easybank.c63930c5.png",
+    "static/media/github.png": "/portfolio/static/media/github.904ee265.png",
+    "static/media/netlify.png": "/portfolio/static/media/netlify.95e178f5.png",
+    "static/media/tandem.png": "/portfolio/static/media/tandem.12a0f799.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/runtime-main.209c2d7e.js",
     "static/css/2.a32f25e9.chunk.css",
     "static/js/2.83d0a931.chunk.js",
     "static/css/main.94a9f84b.chunk.css",
-    "static/js/main.c2f118d0.chunk.js"
+    "static/js/main.6c5affb1.chunk.js"
   ]
 }
