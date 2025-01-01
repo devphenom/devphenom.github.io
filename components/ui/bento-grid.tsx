@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { cn } from "@/utils/cn";
+
 import { BackgroundGradientAnimation } from "./gradient-bg";
 import { GlobeDemo } from "./grid-globe";
-import { useState } from "react";
-import animationData from "@/data/confetti.json";
+import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import MagicButton from "../magic-button";
-import { IoCopyOutline } from "react-icons/io5";
+import animationData from "@/data/confetti.json";
+import { cn } from "@/utils/cn";
+import { useState } from "react";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return <div className={cn("grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto", className)}>{children}</div>;
@@ -58,7 +59,7 @@ export const BentoGridItem = ({
         <div className={`absolute right-0 bottom-5 ${id === 5 && "w-full opacity-80"}`}>{spareImg && <img src={spareImg} alt={spareImg} className={"object-cover object-center w-full h-full"} />}</div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl" />
+            {/* <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl" /> */}
           </BackgroundGradientAnimation>
         )}
         <div className={cn(titleClassName, "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col p-5 lg:p-10")}>
