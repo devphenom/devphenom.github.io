@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { useRef, useState } from "react";
+
 import { BackgroundGradientAnimation } from "./gradient-bg";
 import { GlobeDemo } from "./grid-globe";
 import { IoCopyOutline } from "react-icons/io5";
@@ -8,7 +10,6 @@ import Lottie from "react-lottie";
 import MagicButton from "../magic-button";
 import animationData from "@/data/confetti.json";
 import { cn } from "@/utils/cn";
-import { useState } from "react";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return <div className={cn("grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto", className)}>{children}</div>;
@@ -36,6 +37,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copy, setCopy] = useState(false);
+  const lottieRef = useRef(null);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("aliabdulsamad15@gmail.com");
@@ -89,7 +91,9 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
+                {/* @ts-expect-error Server Component */}
                 <Lottie
+                  ref={lottieRef}
                   options={{
                     loop: copy,
                     autoplay: copy,

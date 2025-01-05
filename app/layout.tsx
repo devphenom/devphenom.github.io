@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+
+import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abdulsamad's Portfolio",
-  description: "Modern and minimalist portfolio",
+  title: "Abdulsamad Ali | Software Engineer",
+  description: "devphenom.github.io",
 };
 
 export default function RootLayout({
