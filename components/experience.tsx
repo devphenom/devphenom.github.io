@@ -2,7 +2,8 @@
 
 import { motion, useReducedMotion } from "motion/react";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { experience } from "@/lib/constants";
 import { techIcon } from "@/components/tech-icons";
@@ -133,8 +134,16 @@ function TimelineItem({
   );
 }
 
+const DEFAULT_VISIBLE = 2;
+
 export function Experience() {
   const reduceMotion = useReducedMotion() ?? false;
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleItems = expanded
+    ? experience.items
+    : experience.items.slice(0, DEFAULT_VISIBLE);
+  const hiddenCount = experience.items.length - DEFAULT_VISIBLE;
 
   return (
     <section
@@ -164,7 +173,7 @@ export function Experience() {
             aria-hidden
             className="absolute bottom-2 left-1.5 top-2 w-px bg-gradient-to-b from-border via-border to-transparent"
           />
-          {experience.items.map((item, i) => (
+          {visibleItems.map((item, i) => (
             <TimelineItem
               key={`${item.company}-${item.start}`}
               item={item}
@@ -173,6 +182,25 @@ export function Experience() {
             />
           ))}
         </ol>
+
+        {hiddenCount > 0 ? (
+          <div className="mt-2 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+              className="group inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:border-foreground/30 hover:text-foreground"
+            >
+              {expanded ? "View less" : `View ${hiddenCount} more`}
+              <ChevronDown
+                className={cn(
+                  "size-4 transition-transform duration-300",
+                  expanded && "rotate-180",
+                )}
+              />
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );

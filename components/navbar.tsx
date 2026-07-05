@@ -1,19 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconMenu2,
 } from "@tabler/icons-react";
-import { Download } from "lucide-react";
 import {
-  Navbar as ResizableNavbar,
-  NavBody,
-  NavItems,
   MobileNav,
   MobileNavHeader,
+  NavBody,
+  NavItems,
+  Navbar as ResizableNavbar,
 } from "@/components/ui/resizable-navbar";
+import { RESUME_URL, navItems, profile, socials } from "@/lib/constants";
 import {
   Sheet,
   SheetContent,
@@ -21,9 +20,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { buttonVariants } from "@/components/ui/button";
+
+import { Download } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
-import { navItems, socials, RESUME_URL, profile } from "@/lib/constants";
+import { buttonVariants } from "@/components/ui/button";
+import { useState } from "react";
 
 const socialLinks = [
   { href: socials.github, label: "GitHub", Icon: IconBrandGithub },
@@ -34,7 +35,7 @@ function Logo() {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center px-2 py-1 text-base font-semibold tracking-tight text-foreground"
+      className="relative z-20 mr-4 flex items-center px-2 py-1 text-sm font-display font-semibold tracking-tight text-foreground"
     >
       {profile.name}
     </a>

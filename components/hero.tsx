@@ -1,12 +1,11 @@
 "use client";
 
-import { motion } from "motion/react";
+import { AnimatedGridWithDots } from "@/components/ui/animated-grid-with-dots";
 import { ArrowRight } from "lucide-react";
-
+import { PulsingCircles } from "@/components/ui/pulsing-circles";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AnimatedGridWithDots } from "@/components/ui/animated-grid-with-dots";
-import { PulsingCircles } from "@/components/ui/pulsing-circles";
+import { motion } from "motion/react";
 import { profile } from "@/lib/constants";
 
 const fadeUp = {
