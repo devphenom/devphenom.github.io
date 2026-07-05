@@ -75,16 +75,16 @@ export function Hero() {
         >
           I&apos;m{" "}
           <span className="font-semibold text-foreground">{profile.name}</span>,
-          a fullstack engineer who turns rough concepts into dependable,
-          production-grade software. I move comfortably across the stack, from
-          fluid{" "}
+          a fullstack engineer who turns rough concepts into software that ships
+          and holds up in production. I build the{" "}
           <span className="font-medium text-foreground">
             React &amp; React Native
           </span>{" "}
-          interfaces to resilient{" "}
+          interfaces people touch, and the{" "}
           <span className="font-medium text-foreground">
-            Node.js services with NestJS &amp; Fastify.
-          </span>
+            Node.js services with NestJS &amp; Fastify
+          </span>{" "}
+          behind them.
           {/* {" "}
           &mdash; so an idea can go from sketch to shipped without the handoffs.
           Right now I&apos;m doing exactly that at {profile.company}. */}
