@@ -339,3 +339,11 @@ export const experience = {
     },
   ],
 } as const;
+
+export const contact = {
+  heading: "Contact",
+  title: "Have something worth building?",
+  description:
+    "I'm open to senior roles and selective collaborations. Tell me what you're building.",
+  email: "aliabdulsamad15@gmail.com",
+} as const;
