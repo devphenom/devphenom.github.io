@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, DM_Mono, Syne } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { JsonLd } from "@/components/json-ld";
+import { profile, site } from "@/lib/constants";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -37,10 +39,76 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Abdulsamad Ali — Fullstack Engineer",
-  description:
-    "Portfolio of Abdulsamad Ali (devphenom), a frontend-heavy fullstack engineer building web and mobile products with React, Next.js, and React Native.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.title,
+    template: "%s · Abdulsamad Ali",
+  },
+  description: site.description,
+  keywords: [...site.keywords],
+  applicationName: site.title,
+  authors: [{ name: profile.name, url: site.url }],
+  creator: profile.name,
+  publisher: profile.name,
+  category: "technology",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.title,
+    title: site.title,
+    description: site.description,
+    locale: site.locale,
+    // og:image tags are supplied by app/opengraph-image.tsx (file convention).
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    creator: site.twitterHandle,
+    site: site.twitterHandle,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/icon", type: "image/png" }],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon",
+  },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: profile.name,
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: { telephone: false },
+  ...(site.verification.google
+    ? { verification: { google: site.verification.google } }
+    : {}),
 };
+
+export function generateViewport(): Viewport {
+  return {
+    themeColor: [
+      { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+      { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+    ],
+    colorScheme: "dark light",
+    width: "device-width",
+    initialScale: 1,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -53,6 +121,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${dmSans.variable} ${dmMono.variable} ${gatwick.variable} ${syne.variable} h-full antialiased`}
     >
+      <head>
+        <JsonLd />
+      </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider
           attribute="class"

@@ -1,3 +1,31 @@
+export const site = {
+  url: "https://devphenom.github.io",
+  name: "Abdulsamad Ali",
+  title: "Abdulsamad Ali — Fullstack Engineer",
+  description:
+    "Abdulsamad Ali (devphenom) is a frontend-heavy fullstack engineer building fast, polished web and mobile products with React, Next.js, React Native, and Node.js. 5+ years shipping production software end to end.",
+  handle: "devphenom",
+  twitterHandle: "@devphenom",
+  locale: "en_US",
+  keywords: [
+    "Abdulsamad Ali",
+    "devphenom",
+    "Fullstack Engineer",
+    "Frontend Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "Node.js",
+    "NestJS",
+    "TypeScript",
+    "Web Developer",
+    "Software Engineer",
+    "Nigeria",
+  ],
+  // Paste Search Console / Bing tokens here later; empty ⇒ tag omitted.
+  verification: { google: "", bing: "" },
+} as const;
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
