@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     locale: site.locale,
-    // og:image tags are supplied by app/opengraph-image.tsx (file convention).
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: site.title }],
   },
   twitter: {
     card: "summary_large_image",
@@ -69,6 +69,7 @@ export const metadata: Metadata = {
     description: site.description,
     creator: site.twitterHandle,
     site: site.twitterHandle,
+    images: [{ url: "/og.png", alt: site.title }],
   },
   robots: {
     index: true,
@@ -82,9 +83,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/icon", type: "image/png" }],
+    icon: [{ url: "/icon.png", type: "image/png" }],
     shortcut: "/favicon.ico",
-    apple: "/apple-icon",
+    apple: "/apple-icon.png",
   },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
@@ -121,10 +122,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${dmSans.variable} ${dmMono.variable} ${gatwick.variable} ${syne.variable} h-full antialiased`}
     >
-      <head>
-        <JsonLd />
-      </head>
       <body className="min-h-full flex flex-col">
+        <JsonLd />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

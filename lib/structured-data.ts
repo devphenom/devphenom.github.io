@@ -17,7 +17,7 @@ export function getStructuredData() {
         name: profile.name,
         alternateName: site.handle,
         url: site.url,
-        image: `${site.url}/opengraph-image`,
+        image: `${site.url}/og.png`,
         jobTitle: profile.role,
         description: about.bio[0],
         email: `mailto:${contact.email}`,
