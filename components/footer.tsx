@@ -17,7 +17,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="sticky bottom-0 z-0 flex min-h-[75vh] w-full flex-col justify-between overflow-hidden bg-background">
+    <footer className="sticky bottom-0 z-0 flex min-h-[42vh] w-full flex-col justify-between overflow-hidden bg-background sm:min-h-[75vh]">
       {/* Foreground: divider, socials, copyright */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-12">
         <div className="flex flex-col gap-6 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">

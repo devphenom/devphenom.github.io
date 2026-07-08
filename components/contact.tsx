@@ -11,11 +11,11 @@ import { Mail } from "lucide-react";
 import { contact, socials } from "@/lib/constants";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 28 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: 0.1 * i, ease: "easeOut" as const },
+    transition: { duration: 0.6, delay: 0.1 * i, ease: "easeOut" as const },
   }),
 };
 
@@ -35,7 +35,7 @@ export function Contact() {
           variants: fadeUp,
           initial: "hidden" as const,
           whileInView: "show" as const,
-          viewport: { once: true, margin: "-80px" },
+          viewport: { once: true, margin: "-40px" },
           custom: i,
         };
 
@@ -55,7 +55,10 @@ export function Contact() {
           />
         </motion.div>
 
-        <motion.div {...anim(1)} className="mt-14 flex max-w-2xl flex-col gap-8">
+        <motion.div
+          {...anim(1)}
+          className="mt-14 flex max-w-2xl flex-col gap-8"
+        >
           <div className="space-y-3">
             <p className="text-2xl font-semibold text-foreground sm:text-3xl">
               {contact.title}
