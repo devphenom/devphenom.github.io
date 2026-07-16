@@ -70,13 +70,7 @@ export function About() {
             />
             <div className="relative space-y-4">
               {about.bio.map((paragraph, i) => (
-                <p
-                  key={i}
-                  className={cn(
-                    "leading-relaxed text-muted-foreground",
-                    i === 0 && "text-lg text-foreground/90 sm:text-xl",
-                  )}
-                >
+                <p key={i} className="leading-relaxed text-muted-foreground">
                   {paragraph}
                 </p>
               ))}

@@ -39,7 +39,7 @@ export const socials = {
   twitter: "https://twitter.com/devphenom",
 } as const;
 
-export const RESUME_URL = "/resume.pdf";
+export const RESUME_URL = "/ali-abdulsamad-resume.pdf";
 
 export const profile = {
   name: "Abdulsamad Ali",
@@ -61,18 +61,7 @@ export const about = {
     href: "https://github.com/devphenom/3d-react-carousel",
   },
   techLabel: "Tech Stack",
-  techStack: [
-    "TypeScript",
-    "React",
-    "Next.js",
-    "React Native",
-    "Motion",
-    "Node.js",
-    "NestJS",
-    "Prisma",
-    "PostgreSQL",
-    "Tailwind CSS",
-  ],
+  techStack: ["TypeScript", "React", "Next.js", "React Native", "Motion", "Node.js", "NestJS", "Prisma", "PostgreSQL", "Tailwind CSS"],
   stats: [
     { value: "5+", label: "Years in production" },
     { value: "Web + Mobile", label: "Platforms shipped" },
@@ -90,8 +79,7 @@ export const about = {
   },
   cta: {
     title: "Have something worth building?",
-    description:
-      "I'm open to senior roles and selective collaborations. Let's ship it.",
+    description: "I'm open to senior roles and selective collaborations. Let's ship it.",
     href: "#contact",
     label: "Get in touch",
   },
@@ -104,8 +92,7 @@ export const projects = {
       name: "Pitchsync",
       image: "/projects/pitchsync.png",
       eyebrow: "Project",
-      description:
-        "A full-stack platform for booking and scheduling stadiums and pitches across Nigeria. It's a monorepo: marketing site, admin dashboard, and API.",
+      description: "A full-stack platform for booking and scheduling stadiums and pitches across Nigeria. It's a monorepo: marketing site, admin dashboard, and API.",
       tags: ["Next.js", "React", "Node.js"],
       live: "https://pitchsync.ng",
       repo: null,
@@ -115,10 +102,9 @@ export const projects = {
       name: "Marvin",
       image: "/projects/marvin.png",
       eyebrow: "Project",
-      description:
-        "An AI presentation builder that turns raw slide files into on-brand, investor-ready pitch decks. Behind it sits a parsing pipeline, a slide editor, and an export engine.",
+      description: "An AI presentation builder that turns raw slide files into on-brand, investor-ready pitch decks. Behind it sits a parsing pipeline, a slide editor, and an export engine.",
       tags: ["Next.js", "React", "NestJS", "Prisma"],
-      live: null,
+      live: "https://consultmarvin.com",
       repo: null,
       featured: false,
     },
@@ -140,7 +126,7 @@ export const projects = {
       description:
         "A telemedicine platform connecting patients with providers and health services — hospitals, pharmacies, blood banks, and ambulances — across a patient mobile app and a provider dashboard.",
       tags: ["React Native", "Next.js", "TypeScript", "Tailwind CSS"],
-      live: null,
+      live: "https://telscare.com",
       repo: null,
       featured: false,
     },
@@ -148,8 +134,7 @@ export const projects = {
       name: "Tenalve",
       image: "/projects/tenalve.png",
       eyebrow: "Project",
-      description:
-        "A multi-tenant sports platform for organizations and facilities — member management, bookings, and dashboards, each org on its own subdomain. Built on the Next.js App Router.",
+      description: "A multi-tenant sports platform for organizations and facilities — member management, bookings, and dashboards, each org on its own subdomain. Built on the Next.js App Router.",
       tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       live: "https://tenalve.com",
       repo: null,
@@ -159,8 +144,7 @@ export const projects = {
       name: "TicketSir",
       image: "/projects/ticketisr.png",
       eyebrow: "Project",
-      description:
-        "An event-ticketing platform where fans discover shows and buy tickets, with card checkout and an embeddable purchase widget powering the storefront and API.",
+      description: "An event-ticketing platform where fans discover shows and buy tickets, with card checkout and an embeddable purchase widget powering the storefront and API.",
       tags: ["React", "Node.js"],
       live: "https://www.ticketsir.com",
       repo: null,
@@ -170,8 +154,7 @@ export const projects = {
       name: "Uri Creative",
       image: "/projects/uricreative.png",
       eyebrow: "Project",
-      description:
-        "A marketplace connecting creative talent — models, hosts, and actors — with brands and clients hiring for events and projects, with AI-powered social insights and growth tools.",
+      description: "A marketplace connecting creative talent — models, hosts, and actors — with brands and clients hiring for events and projects, with AI-powered social insights and growth tools.",
       tags: ["TypeScript", "React", "Next.js", "Motion"],
       live: "https://uricreative.com",
       repo: null,
@@ -181,8 +164,7 @@ export const projects = {
       name: "Verified Creators",
       image: "/projects/verifiedcreators.png",
       eyebrow: "Project",
-      description:
-        "A non-KYC, on-chain identity platform built on DeSo that lets web3 creators prove they're real — removing trust friction for investors backing their tokens and NFTs.",
+      description: "A non-KYC, on-chain identity platform built on DeSo that lets web3 creators prove they're real — removing trust friction for investors backing their tokens and NFTs.",
       tags: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
       live: "https://verifiedcreators.io",
       repo: null,
@@ -316,10 +298,7 @@ export const experience = {
       start: "Apr 2021",
       end: "Aug 2021",
       current: false,
-      points: [
-        "Built and improved web UI in React.js alongside the design and backend teams.",
-        "Worked with designers to apply UX best practices in implementation.",
-      ],
+      points: ["Built and improved web UI in React.js alongside the design and backend teams.", "Worked with designers to apply UX best practices in implementation."],
       tags: ["React"],
       href: null,
     },
@@ -331,9 +310,7 @@ export const experience = {
       start: "Oct 2020",
       end: "Mar 2021",
       current: false,
-      points: [
-        "Designed and built front-end applications with HTML5, CSS3, and React.",
-      ],
+      points: ["Designed and built front-end applications with HTML5, CSS3, and React."],
       tags: ["React"],
       href: null,
     },
@@ -345,9 +322,7 @@ export const experience = {
       start: "Jul 2020",
       end: "Oct 2020",
       current: false,
-      points: [
-        "Frontend internship — shipped projects and earned certification.",
-      ],
+      points: ["Frontend internship — shipped projects and earned certification."],
       tags: ["React"],
       href: null,
     },
@@ -359,9 +334,7 @@ export const experience = {
       start: "Jun 2020",
       end: "Jul 2020",
       current: false,
-      points: [
-        "Intensive frontend internship covering version control, debugging, and web fundamentals.",
-      ],
+      points: ["Intensive frontend internship covering version control, debugging, and web fundamentals."],
       tags: ["React"],
       href: null,
     },
@@ -371,7 +344,6 @@ export const experience = {
 export const contact = {
   heading: "Contact",
   title: "Have something worth building?",
-  description:
-    "I'm open to senior roles and selective collaborations. Tell me what you're building.",
+  description: "I'm open to senior roles and selective collaborations. Tell me what you're building.",
   email: "aliabdulsamad15@gmail.com",
 } as const;

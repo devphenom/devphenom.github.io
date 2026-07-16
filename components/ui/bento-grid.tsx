@@ -67,7 +67,7 @@ export function BentoCard({
       viewport={{ once: true, margin: "-80px" }}
       onMouseMove={handleSpotlight}
       className={cn(
-        "group relative isolate flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 hover:border-foreground/20 hover:shadow-md motion-safe:hover:-translate-y-0.5",
+        "group relative isolate flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-sm transition-[border-color,box-shadow] duration-300 hover:border-foreground/20 hover:shadow-md",
         className,
       )}
     >

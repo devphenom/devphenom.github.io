@@ -67,7 +67,10 @@ export function CurvedMenu({ onNavigate }: { onNavigate: () => void }) {
             href={RESUME_URL}
             download
             onClick={onNavigate}
-            className={cn(buttonVariants({ variant: "outline" }), "w-fit")}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "h-12 w-fit gap-2 rounded-full px-8 text-base font-medium",
+            )}
           >
             <Download className="size-4" />
             Download Resume

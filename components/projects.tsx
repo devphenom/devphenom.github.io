@@ -280,22 +280,24 @@ function ProjectCard({
         </div>
         <div className="mt-auto space-y-4">
           {project.tags.length > 0 ? <TagPills tags={project.tags} /> : null}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-border pt-4">
-            {project.live ? (
-              <ProjectLink
-                href={project.live}
-                icon={ArrowUpRight}
-                label="Live site"
-              />
-            ) : null}
-            {project.repo ? (
-              <ProjectLink
-                href={project.repo}
-                icon={IconBrandGithub}
-                label="Code"
-              />
-            ) : null}
-          </div>
+          {project.live || project.repo ? (
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-border pt-4">
+              {project.live ? (
+                <ProjectLink
+                  href={project.live}
+                  icon={ArrowUpRight}
+                  label="Live site"
+                />
+              ) : null}
+              {project.repo ? (
+                <ProjectLink
+                  href={project.repo}
+                  icon={IconBrandGithub}
+                  label="Code"
+                />
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
